@@ -6,22 +6,27 @@ type Props = {};
 
 const Hero = (props: Props) => {
   return (
-    <div className="flex flex-col min-h-screen justify-center items-center">
-      <header className="bg-primary text-primary-foreground py-6 md:py-12 flex-1 w-full">
-        <div className="container px-4 md:px-6 h-full flex flex-col items-center justify-between md:flex-row">
-          <div className="space-y-4 text-center md:text-left">
-            <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
-               Clickstream Data Brand Report and DDoS detection
+    <div className="flex flex-col min-h-screen justify-center items-center bg-gradient-to-r from-purple-500 via-indigo-500 to-blue-500 text-white">
+      <header className="flex-1 w-full flex justify-center items-center">
+        <div className="container px-8 md:px-12 h-full flex flex-col items-center justify-center md:flex-row">
+          <div className="space-y-6 text-center md:text-left">
+            <h1 className="text-4xl font-extrabold tracking-tight sm:text-6xl md:text-7xl drop-shadow-lg">
+              Clickstream Brand Analysis Report
             </h1>
-            <p className="max-w-[600px] text-lg md:text-xl">
-              Clickstream ETL Analysis helps you effortlessly extract,
-              transform, and analyze user interaction data from your web
-              applications. Gain valuable insights to enhance user experience
-              and drive business growth.
-            </p>
-            <div className="flex flex-col gap-2 sm:flex-row justify-center md:justify-start">
-              <Button variant={"secondary"} onClick={() => signIn("cognito")}>
-                Login
+            <div className="flex flex-col gap-4 sm:flex-row justify-center md:justify-start">
+              <Button
+                variant={"link"}
+                className="bg-white text-indigo-600 hover:bg-indigo-100"
+                onClick={() => signIn("cognito")}
+              >
+                Get Started
+              </Button>
+              <Button
+                variant={"secondary"}
+                className="bg-transparent border border-white text-white hover:bg-white hover:text-indigo-600"
+                onClick={() => window.location.href = "#learn-more"}
+              >
+                Learn More
               </Button>
             </div>
           </div>
